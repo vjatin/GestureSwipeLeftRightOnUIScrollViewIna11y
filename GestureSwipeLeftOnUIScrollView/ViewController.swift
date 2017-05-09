@@ -25,15 +25,10 @@ class ViewController: UIViewController {
         swipeleftRec.direction = .left
         swipeleftRec.addTarget(self, action: #selector(ViewController.swipedViewleft))
         swipeView.addGestureRecognizer(swipeleftRec)
-        swipeleftAction = UIAccessibilityCustomAction(name: "Swipe Left", target: self, selector: #selector(ViewController.swipeleftActionActivated))
         swiperightRec.direction = .right
         swiperightRec.addTarget(self, action: #selector(ViewController.swipedViewright))
         swipeView.addGestureRecognizer(swiperightRec)
-        swiperightAction = UIAccessibilityCustomAction(name: "Swipe Right", target: self, selector: #selector(ViewController.swiperightActionActivated))
-        //commented the custom actions call 
-        //accessibilityCustomActions = [swipeleftAction, swiperightAction]
-        
-    }
+        }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

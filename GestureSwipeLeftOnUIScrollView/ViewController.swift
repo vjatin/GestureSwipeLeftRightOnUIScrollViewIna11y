@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  GestureSwipeLeftOnUIScrollView
 //
-//  Created by Jatin K Vaishnav on 11/20/15.
+//  Created by Jatin K Vaishnav on 05/20/17.
 //  Copyright © 2015 Jatin K Vaishnav. All rights reserved.
 //
 
@@ -25,14 +25,12 @@ class ViewController: UIViewController {
         swipeleftRec.direction = .left
         swipeleftRec.addTarget(self, action: #selector(ViewController.swipedViewleft))
         swipeView.addGestureRecognizer(swipeleftRec)
-        //swipeView.userInteractionEnabled = true
         swipeleftAction = UIAccessibilityCustomAction(name: "Swipe Left", target: self, selector: #selector(ViewController.swipeleftActionActivated))
-        
         swiperightRec.direction = .right
         swiperightRec.addTarget(self, action: #selector(ViewController.swipedViewright))
         swipeView.addGestureRecognizer(swiperightRec)
-        //swipeView.userInteractionEnabled = true test test
         swiperightAction = UIAccessibilityCustomAction(name: "Swipe Right", target: self, selector: #selector(ViewController.swiperightActionActivated))
+        //commented the custom actions call 
         //accessibilityCustomActions = [swipeleftAction, swiperightAction]
         
     }
